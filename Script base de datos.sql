@@ -10,39 +10,31 @@ GO
 -- 1. CREACIÓN DE BASE DE DATOS CON DIMENSIONAMIENTO
 -- =====================================================================
 
--- Eliminar BD si existe (para desarrollo)
-IF EXISTS (SELECT name FROM sys.databases WHERE name = 'DB_Gimnasio_ProyectoFinal')
-BEGIN
-    ALTER DATABASE DB_Gimnasio_ProyectoFinal SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-    DROP DATABASE DB_Gimnasio_ProyectoFinal;
-END
-GO
-
 -- Crear BD con configuración de almacenamiento optimizada
-CREATE DATABASE DB_Gimnasio_ProyectoFinal
-ON PRIMARY 
-(
-    NAME = N'Gimnasio_Data',
-    FILENAME = N'C:\SQLData\Gimnasio_Data.mdf',
-    SIZE = 100MB,              -- Tamaño inicial
-    MAXSIZE = 2GB,             -- Tamaño máximo
-    FILEGROWTH = 10MB          -- Crecimiento automático
-)
-LOG ON 
-(
-    NAME = N'Gimnasio_Log',
-    FILENAME = N'C:\SQLData\Gimnasio_Log.ldf',
-    SIZE = 50MB,
-    MAXSIZE = 500MB,
-    FILEGROWTH = 5MB
-);
+CREATE DATABASE DB_GYM_STONE
+-- ON PRIMARY 
+-- (
+--     NAME = N'Gimnasio_Data',
+--     FILENAME = N'C:\SQLData\Gimnasio_Data.mdf',
+--     SIZE = 100MB,              
+--     MAXSIZE = 2GB,             
+--     FILEGROWTH = 10MB          
+-- )
+-- LOG ON 
+-- (
+--     NAME = N'Gimnasio_Log',
+--     FILENAME = N'C:\SQLData\Gimnasio_Log.ldf',
+--     SIZE = 50MB,
+--     MAXSIZE = 500MB,
+--     FILEGROWTH = 5MB
+-- );
 GO
 
 -- Configurar modelo de recuperación FULL para respaldos
-ALTER DATABASE DB_Gimnasio_ProyectoFinal SET RECOVERY FULL;
+ALTER DATABASE DB_GYM_STONE SET RECOVERY FULL;
 GO
 
-USE DB_Gimnasio_ProyectoFinal;
+USE DB_GYM_STONE;
 GO
 
 -- =====================================================================
@@ -502,7 +494,7 @@ CREATE LOGIN contador_user WITH PASSWORD = 'Contab$2024!', CHECK_POLICY = ON;
 CREATE LOGIN reportes_user WITH PASSWORD = 'Report$2024!', CHECK_POLICY = ON;
 GO
 
-USE DB_Gimnasio_ProyectoFinal;
+USE DB_GYM_STONE;
 GO
 
 -- Crear usuarios en la base de datos
@@ -588,7 +580,7 @@ GO
 
 -- Script para respaldo completo (ejecutar en SQL Agent)
 /*
-BACKUP DATABASE DB_Gimnasio_ProyectoFinal
+BACKUP DATABASE DB_GYM_STONE
 TO DISK = 'C:\SQLBackups\Gimnasio_Full.bak'
 WITH 
     COMPRESSION,
@@ -601,7 +593,7 @@ GO
 
 -- Script para respaldo diferencial (ejecutar diariamente)
 /*
-BACKUP DATABASE DB_Gimnasio_ProyectoFinal
+BACKUP DATABASE DB_GYM_STONE
 TO DISK = 'C:\SQLBackups\Gimnasio_Diff.bak'
 WITH 
     DIFFERENTIAL,
@@ -614,7 +606,7 @@ GO
 
 -- Script para respaldo de log (ejecutar cada hora)
 /*
-BACKUP LOG DB_Gimnasio_ProyectoFinal
+BACKUP LOG DB_GYM_STONE
 TO DISK = 'C:\SQLBackups\Gimnasio_Log.trn'
 WITH 
     COMPRESSION,
@@ -627,10 +619,10 @@ GO
 -- Script de recuperación
 /*
 -- 1. Restaurar respaldo completo
-RESTORE DATABASE DB_Gimnasio_ProyectoFinal
+RESTORE DATABASE DB_GYM_STONE
 FROM DISK = 'C:\SQLBackups\Gimnasio_Full.bak'
 WITH NORECOVERY, REPLACE;
 
 -- 2. Restaurar respaldo diferencial
-RESTORE DATABASE DB_Gimnasio_ProyectoFinal
+RESTORE DATABASE DB_GYM_STONE
 FROM DISK = 'C:\SQLBackups\Gimnasio_Diff
