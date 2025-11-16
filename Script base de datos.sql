@@ -23,4 +23,3 @@ LOG ON -- logs
     MAXSIZE = 2GB,
     FILEGROWTH = 10MB
 );
-=======

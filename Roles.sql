@@ -32,3 +32,4 @@ GRANT SELECT ON SCHEMA::Finanzas TO backup_operator;
 GRANT SELECT ON SCHEMA::RRHH TO backup_operator;
 GRANT SELECT ON SCHEMA::Operaciones TO backup_operator;
 GO
+
