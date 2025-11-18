@@ -11,7 +11,7 @@ BEGIN
     EXEC msdb.dbo.sp_add_operator 
         @name = N'DBA_Team',
         @enabled = 1,
-        @email_address = N'dba@gimnasio.com';
+        @email_address = N'dba@gimnasio.com'; --direccion de correo del esquipo DBA
 END
 GO
 
@@ -38,7 +38,7 @@ EXEC msdb.dbo.sp_add_jobstep
     @step_name = N'Realizar_Backup_Full',
     @subsystem = N'TSQL',
     @command = N'DECLARE @fecha VARCHAR(20) = REPLACE(CONVERT(VARCHAR(20), GETDATE(), 120), '':'', '''')
-DECLARE @ruta VARCHAR(200) = ''E:\Backups\Gimnasio\FULL\gym_full_'' + @fecha + ''.bak''
+DECLARE @ruta VARCHAR(200) = ''E:\Backups\Gimnasio\FULL\gym_full_'' + @fecha + ''.bak'' 
 
 BACKUP DATABASE [gym_management] 
 TO DISK = @ruta
