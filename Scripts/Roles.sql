@@ -32,4 +32,10 @@ GRANT SELECT ON SCHEMA::Finanzas TO backup_operator;
 GRANT SELECT ON SCHEMA::RRHH TO backup_operator;
 GRANT SELECT ON SCHEMA::Operaciones TO backup_operator;
 GO
-
+-- Rol: profesor
+CREATE ROLE R_profesor;
+GRANT SELECT ON SCHEMA::Negocio TO profesor;
+GRANT SELECT ON SCHEMA::Finanzas TO profesor;
+GRANT SELECT ON SCHEMA::RRHH TO profesor;
+GRANT SELECT ON SCHEMA::Operaciones TO profesor;
+GO

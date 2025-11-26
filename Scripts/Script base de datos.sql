@@ -10,7 +10,7 @@ CREATE DATABASE GimnasioDB
 ON PRIMARY -- Datos principales y tablas
 (
     NAME = 'GimnasioDB_Data',
-    FILENAME = 'C:\Backups\GimnasioDB\GimnasioDB_Data.mdf', -- Cambien la dirección a donde guarden los backups
+    FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\GimnasioDB_Data.mdf', -- Cambien la dirección a donde guarden los backups
     SIZE = 100MB,
     MAXSIZE = UNLIMITED,
     FILEGROWTH = 50MB
@@ -18,11 +18,36 @@ ON PRIMARY -- Datos principales y tablas
 LOG ON -- logs
 (
     NAME = 'GimnasioDB_Log',
-    FILENAME = 'C:\Backups\GimnasioDB\GimnasioDB_Log.ldf', -- Cambien la dirección a donde guarden los backups
+    FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\GimnasioDB_Log.ldf', -- Cambien la dirección a donde guarden los backups
     SIZE = 50MB,
     MAXSIZE = 2GB,
     FILEGROWTH = 10MB
 );
+
+GO
+
+-- Asegurarse de usar la base de datos que acabamos de crear
+USE GimnasioDB;
+GO
+
+-- Crear esquemas si no existen (evita el error: schema no existe / permisos)
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Negocio')
+BEGIN
+    EXEC('CREATE SCHEMA [Negocio]');
+END
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Finanzas')
+BEGIN
+    EXEC('CREATE SCHEMA [Finanzas]');
+END
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'RRHH')
+BEGIN
+    EXEC('CREATE SCHEMA [RRHH]');
+END
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Operaciones')
+BEGIN
+    EXEC('CREATE SCHEMA [Operaciones]');
+END
+GO
 
 -- ESQUEMA NEGOCIO
 -- Tabla: Membresia
