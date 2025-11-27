@@ -152,7 +152,7 @@ VALUES
     ('Pilates', 'Mar-Jue 10:00-11:00 AM', 3, 20, 1),
     ('HIIT (Alta Intensidad)', 'Lun-Mie-Vie 8:00-9:00 PM', 10, 25, 1),
     ('Boxeo Fitness', 'Lun-Mie-Vie 7:00-8:00 PM', 7, 20, 1),
-    ('Yoga Vespertino', 'Sï¿½bado 9:00-10:30 AM', 20, 25, 1),
+    ('Yoga Vespertino', 'Sábado 9:00-10:30 AM', 20, 25, 1),
     ('Funcional Training', 'Domingo 10:00-11:00 AM', 9, 22, 1);
 GO
 SELECT * FROM Negocio.Clases
@@ -176,38 +176,40 @@ SELECT * FROM Negocio.SocioxClase
 INSERT INTO Operaciones.Equipo (Nombre, Fecha_compra, Estado, FechaCreacion, FechaModificacion, UsuarioModificacion) VALUES
 ('Caminadora Precor TRM 835', '2023-01-15 09:00:00', 'Operativo', '2023-01-15 09:00:00', '2023-01-15 09:00:00', 'admin_gym'),
 ('Caminadora Life Fitness T5', '2023-01-15 09:00:00', 'Operativo', '2023-01-15 09:00:00', '2023-01-15 09:00:00', 'admin_gym'),
-('Bicicleta Estï¿½tica Schwinn IC4', '2023-02-10 10:30:00', 'Operativo', '2023-02-10 10:30:00', '2023-02-10 10:30:00', 'admin_gym'),
-('Elï¿½ptica NordicTrack Commercial 14.9', '2023-02-20 11:15:00', 'En Mantenimiento', '2023-02-20 11:15:00', '2024-11-25 14:20:00', 'tecnico_mantenimiento'),
+('Bicicleta Estática Schwinn IC4', '2023-02-10 10:30:00', 'Operativo', '2023-02-10 10:30:00', '2023-02-10 10:30:00', 'admin_gym'),
+('Elíptica NordicTrack Commercial 14.9', '2023-02-20 11:15:00', 'En Mantenimiento', '2023-02-20 11:15:00', '2024-11-25 14:20:00', 'tecnico_mantenimiento'),
 ('Escaladora StairMaster 8G', '2023-03-05 08:45:00', 'Operativo', '2023-03-05 08:45:00', '2023-03-05 08:45:00', 'admin_gym'),
 ('Remo Concept2 Model D', '2023-03-15 13:00:00', 'Operativo', '2023-03-15 13:00:00', '2023-03-15 13:00:00', 'admin_gym'),
 ('Bicicleta Spinning Keiser M3i', '2023-04-01 09:30:00', 'Operativo', '2023-04-01 09:30:00', '2023-04-01 09:30:00', 'admin_gym'),
 ('Rack Squat Hammer Strength', '2023-01-20 10:00:00', 'Operativo', '2023-01-20 10:00:00', '2023-01-20 10:00:00', 'admin_gym'),
-('Banco Press Banca Olï¿½mpico', '2023-01-20 10:00:00', 'Operativo', '2023-01-20 10:00:00', '2023-01-20 10:00:00', 'admin_gym'),
-('Mï¿½quina Smith Precor', '2023-02-15 11:30:00', 'Operativo', '2023-02-15 11:30:00', '2023-02-15 11:30:00', 'admin_gym'),
-('Prensa de Piernas 45ï¿½ Life Fitness', '2023-02-28 14:00:00', 'Operativo', '2023-02-28 14:00:00', '2023-02-28 14:00:00', 'admin_gym'),
+('Banco Press Banca Olímpico', '2023-01-20 10:00:00', 'Operativo', '2023-01-20 10:00:00', '2023-01-20 10:00:00', 'admin_gym'),
+('Máquina Smith Precor', '2023-02-15 11:30:00', 'Operativo', '2023-02-15 11:30:00', '2023-02-15 11:30:00', 'admin_gym'),
+('Prensa de Piernas 45° Life Fitness', '2023-02-28 14:00:00', 'Operativo', '2023-02-28 14:00:00', '2023-02-28 14:00:00', 'admin_gym'),
 ('Polea Alta/Baja Dual Cybex', '2023-03-10 09:15:00', 'Operativo', '2023-03-10 09:15:00', '2023-03-10 09:15:00', 'admin_gym'),
-('Mï¿½quina Pectoral Fly Technogym', '2023-03-25 10:45:00', 'Operativo', '2023-03-25 10:45:00', '2023-03-25 10:45:00', 'admin_gym'),
-('Multiestaciï¿½n Body-Solid EXM3000LPS', '2023-04-10 12:00:00', 'Operativo', '2023-04-10 12:00:00', '2023-04-10 12:00:00', 'admin_gym'),
+('Máquina Pectoral Fly Technogym', '2023-03-25 10:45:00', 'Operativo', '2023-03-25 10:45:00', '2023-03-25 10:45:00', 'admin_gym'),
+('Multiestación Body-Solid EXM3000LPS', '2023-04-10 12:00:00', 'Operativo', '2023-04-10 12:00:00', '2023-04-10 12:00:00', 'admin_gym'),
 ('Set Mancuernas 5-50 lbs (Par)', '2023-05-01 08:00:00', 'Operativo', '2023-05-01 08:00:00', '2023-05-01 08:00:00', 'admin_gym'),
-('Balï¿½n Medicinal 10 kg Rogue', '2023-05-15 10:30:00', 'Operativo', '2023-05-15 10:30:00', '2023-05-15 10:30:00', 'admin_gym'),
+('Balón Medicinal 10 kg Rogue', '2023-05-15 10:30:00', 'Operativo', '2023-05-15 10:30:00', '2023-05-15 10:30:00', 'admin_gym'),
 ('TRX Suspension Trainer Pro', '2023-06-01 09:00:00', 'Operativo', '2023-06-01 09:00:00', '2023-06-01 09:00:00', 'admin_gym'),
 ('Kettlebell Set 8-32 kg', '2023-06-20 11:45:00', 'Operativo', '2023-06-20 11:45:00', '2023-06-20 11:45:00', 'admin_gym'),
 ('Colchonetas Yoga/Pilates (10 unidades)', '2023-07-05 14:30:00', 'Operativo', '2023-07-05 14:30:00', '2023-07-05 14:30:00', 'admin_gym'),
-('Barras Olï¿½mpicas 20 kg (3 unidades)', '2023-08-15 08:15:00', 'Fuera de Servicio', '2023-08-15 08:15:00', '2024-11-22 09:00:00', 'tecnico_mantenimiento');
+('Barras Olímpicas 20 kg (3 unidades)', '2023-08-15 08:15:00', 'Fuera de Servicio', '2023-08-15 08:15:00', '2024-11-22 09:00:00', 'tecnico_mantenimiento');
 
 -- INSERT MANTENIMIENTO
 INSERT INTO Operaciones.Mantenimiento (ID_Equipo, ID_Empleado, Fecha_mantenimiento, Descripcion, Costo, FechaCreacion, UsuarioModificacion)
 VALUES 
-(1, 5, '2024-03-15 08:30:00', 'Mantenimiento preventivo: lubricaciï¿½n de banda, ajuste de velocidad y limpieza general', 85.00, '2024-03-15 08:30:00', 'tecnico_mantenimiento'),
-(2, 16, '2024-03-20 10:15:00', 'Mantenimiento preventivo: revisiï¿½n de sistema elï¿½ctrico y calibraciï¿½n de display', 75.00, '2024-03-20 10:15:00', 'tecnico_mantenimiento'),
-(3, 5, '2024-04-10 09:00:00', 'Limpieza profunda y lubricaciï¿½n de pedales, ajuste de resistencia', 60.00, '2024-04-10 09:00:00', 'tecnico_mantenimiento'),
-(5, 28, '2024-04-25 14:30:00', 'Mantenimiento preventivo: lubricaciï¿½n de cadena, revisiï¿½n de escalones', 95.00, '2024-04-25 14:30:00', 'tecnico_mantenimiento'),
-(6, 16, '2024-05-05 11:00:00', 'Revisiï¿½n general, lubricaciï¿½n de rieles y ajuste de tensiï¿½n', 70.00, '2024-05-05 11:00:00', 'tecnico_mantenimiento'),
-(4, 5, '2024-06-12 08:45:00', 'Reparaciï¿½n de sensor de frecuencia cardï¿½aca y reemplazo de cable de alimentaciï¿½n', 125.50, '2024-06-12 08:45:00', 'tecnico_mantenimiento'),
-(7, 28, '2024-06-18 13:20:00', 'Reemplazo de piï¿½ï¿½n desgastado y ajuste de sistema de frenado', 180.00, '2024-06-18 13:20:00', 'tecnico_mantenimiento'),
+(1, 5, '2024-03-15 08:30:00', 'Mantenimiento preventivo: lubricación de banda, ajuste de velocidad y limpieza general', 85.00, '2024-03-15 08:30:00', 'tecnico_mantenimiento'),
+(2, 16, '2024-03-20 10:15:00', 'Mantenimiento preventivo: revisión de sistema eléctrico y calibración de display', 75.00, '2024-03-20 10:15:00', 'tecnico_mantenimiento'),
+(3, 5, '2024-04-10 09:00:00', 'Limpieza profunda y lubricación de pedales, ajuste de resistencia', 60.00, '2024-04-10 09:00:00', 'tecnico_mantenimiento'),
+(5, 28, '2024-04-25 14:30:00', 'Mantenimiento preventivo: lubricación de cadena, revisión de escalones', 95.00, '2024-04-25 14:30:00', 'tecnico_mantenimiento'),
+(6, 16, '2024-05-05 11:00:00', 'Revisión general, lubricación de rieles y ajuste de tensión', 70.00, '2024-05-05 11:00:00', 'tecnico_mantenimiento'),
+(4, 5, '2024-06-12 08:45:00', 'Reparación de sensor de frecuencia cardíaca y reemplazo de cable de alimentación', 125.50, '2024-06-12 08:45:00', 'tecnico_mantenimiento'),
+(7, 28, '2024-06-18 13:20:00', 'Reemplazo de piñón desgastado y ajuste de sistema de frenado', 180.00, '2024-06-18 13:20:00', 'tecnico_mantenimiento'),
 (8, 16, '2024-07-03 09:30:00', 'Soldadura de estructura y pintura anticorrosiva en base del rack', 220.00, '2024-07-03 09:30:00', 'tecnico_mantenimiento'),
-(10, 5, '2024-07-15 10:45:00', 'Reparaciï¿½n de sistema hidrï¿½ulico y reemplazo de pistï¿½n defectuoso', 310.75, '2024-07-15 10:45:00', 'tecnico_mantenimiento'),
-(20, 28, '2024-08-01 08:00:00', 'Reemplazo de barra con fisura, inspecciï¿½n de seguridad completa', 450.00, '2024-08-01 08:00:00', 'tecnico_mantenimiento')
+(10, 5, '2024-07-15 10:45:00', 'Reparación de sistema hidráulico y reemplazo de pistón defectuoso', 310.75, '2024-07-15 10:45:00', 'tecnico_mantenimiento'),
+(20, 28, '2024-08-01 08:00:00', 'Reemplazo de barra con fisura, inspección de seguridad completa', 450.00, '2024-08-01 08:00:00', 'tecnico_mantenimiento')
+SELECT * FROM Operaciones.Mantenimiento
+
 
 SELECT * FROM Finanzas.Pagos
 SET NOCOUNT ON;
@@ -234,11 +236,11 @@ BEGIN
     FROM Negocio.Socio 
     ORDER BY NEWID();
     
-    -- Mï¿½todo de pago aleatorio
+    -- Método de pago aleatorio
     SET @Metodo_pago = CASE (ABS(CHECKSUM(NEWID())) % 5) + 1
         WHEN 1 THEN 'Efectivo'
-        WHEN 2 THEN 'Tarjeta de Crï¿½dito'
-        WHEN 3 THEN 'Tarjeta de Dï¿½bito'
+        WHEN 2 THEN 'Tarjeta de Crédito'
+        WHEN 3 THEN 'Tarjeta de Débito'
         WHEN 4 THEN 'Transferencia Bancaria'
         ELSE 'Cheque'
     END;
@@ -253,7 +255,7 @@ BEGIN
         ELSE 24.99
     END;
     
-    -- Periodo basado en la fecha de pago (MES y Aï¿½O coinciden con @Fecha_pago)
+    -- Periodo basado en la fecha de pago (MES y AÑO coinciden con @Fecha_pago)
     SET @Periodo = CASE MONTH(@Fecha_pago)
         WHEN 1 THEN 'Enero ' + CAST(YEAR(@Fecha_pago) AS NVARCHAR(4))
         WHEN 2 THEN 'Febrero ' + CAST(YEAR(@Fecha_pago) AS NVARCHAR(4))
@@ -285,3 +287,5 @@ END;
 
 SET NOCOUNT OFF;
 GO
+
+EXEC sp_BackupCompleto 'C:\Backups\GimnasioDB'

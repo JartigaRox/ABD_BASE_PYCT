@@ -20,7 +20,7 @@ CREATE SERVER AUDIT [SQL_Audit_GimnasioDB]
 TO FILE 
 (
     -- *** RUTA IMPORTANTE: DEBES CREAR ESTA CARPETA Y ASEGURARTE DE QUE LA CUENTA DE SERVICIO DE SQL SERVER TENGA PERMISOS DE ESCRITURA ***
-    FILEPATH = N'C:\SQL_Audit_Logs\GimnasioDB\' 
+    FILEPATH = 'C:\Audits\GimnasioDB\' 
     ,MAXSIZE = 10 MB -- Tamaño máximo de cada archivo de log
     ,MAX_ROLLOVER_FILES = 5 -- Número máximo de archivos a mantener
     ,RESERVE_DISK_SPACE = OFF
@@ -85,7 +85,7 @@ GO
 -- Después de ejecutar la auditoría y realizar algunas operaciones (SELECT/INSERT) con los usuarios,
 -- usa la siguiente consulta para leer el archivo de logs:
 
-/*
+
 SELECT 
     event_time, 
     action_id, 
@@ -96,10 +96,9 @@ SELECT
     object_name,
     statement
 FROM sys.fn_get_audit_file (
-    N'C:\SQL_Audit_Logs\GimnasioDB\*', -- *** USAR LA MISMA RUTA DE FILEPATH DEL PASO 1 ***
+    'C:\Audits\GimnasioDB\*', -- *** USAR LA MISMA RUTA DE FILEPATH DEL PASO 1 ***
     DEFAULT, 
     DEFAULT
 )
 WHERE action_id IN ('SL', 'IN') -- SL = SELECT, IN = INSERT
 ORDER BY event_time DESC;
-*/
