@@ -286,3 +286,5 @@ END;
 
 SET NOCOUNT OFF;
 GO
+
+SELECT * FROM Finanzas.Pagos

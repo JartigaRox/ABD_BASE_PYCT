@@ -85,6 +85,9 @@ GO
 -- Después de ejecutar la auditoría y realizar algunas operaciones (SELECT/INSERT) con los usuarios,
 -- usa la siguiente consulta para leer el archivo de logs:
 
+EXECUTE AS USER = 'profesor'; 
+SELECT * FROM Negocio.Socio; 
+REVERT;
 
 SELECT 
     event_time, 
